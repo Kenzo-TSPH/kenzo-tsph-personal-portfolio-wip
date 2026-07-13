@@ -1,0 +1,164 @@
+.animation-container-beginning {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 80px;
+    padding: 60px 0;
+    background-color: #121212;
+}
+
+
+/* =========================
+        ICON ROWS
+========================= */
+
+
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+
+.icon-track {
+    display: flex;
+    width: max-content;
+}
+
+.icon-set {
+    display: flex;
+    gap: 80px;
+}
+
+
+.icon-track i {
+    color: white;
+    font-size: 70px;
+}
+
+.icon-track i.fa-github { color: #2a2a2a; }
+.icon-track i.fa-html5 { color: #CC4622; }
+.icon-track i.fa-css3-alt { color: #1265A0; }
+.icon-track i.fa-square-js { color: #DBC218; }
+.icon-track i.fa-twitch { color: #7F3DE2; }
+.icon-track i.fa-tiktok { color: #E0274A; }
+
+.icon-track i.fa-node-js { color: #2B852B; }
+.icon-track i.fa-java { color: #006384; }
+.icon-track i.fa-figma { color: #D6441B; }
+.icon-track i.fa-flutter { color: #014B87; }
+.icon-track i.fa-instagram { color: #CC3853; }
+.icon-track i.fa-youtube { color: #b10000; }
+
+.icon-set i:last-child {
+    margin-right: 80px;
+}
+
+
+/* move right */
+
+.marquee.right .icon-track {
+    animation: moveRight 20s linear infinite;
+    will-change: transform;
+}
+
+
+/* move left */
+
+.marquee.left .icon-track {
+    animation: moveLeft 20s linear infinite;
+    will-change: transform;
+}
+
+.upper-icons:hover .icon-track,
+.lower-icons:hover .icon-track,
+.text-slide.left:hover,
+.text-slide.right:hover {
+    animation-play-state: paused;
+}
+
+
+@keyframes moveRight {
+
+    from {
+        transform: translate3d(-25%, 0, 0);
+    }
+
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+
+}
+
+
+@keyframes moveLeft {
+
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+
+    to {
+        transform: translate3d(-25%, 0, 0);
+    }
+
+}
+
+
+
+
+/* =========================
+        TEXT ROWS
+========================= */
+
+
+.animation-text {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    overflow: hidden;
+}
+
+
+.text-slide {
+    display: flex;
+    width: max-content;
+}
+
+
+.text-slide h1 {
+
+    color: white;
+    -webkit-text-stroke: 2px #F78328;
+
+    font-size: clamp(70px, 10vw, 150px);
+
+    font-weight: 800;
+
+    margin: 0;
+
+    padding-right: 80px;
+
+    white-space: nowrap;
+
+}
+
+.text-slide h1 span.outline {
+    color: #121212;
+    -webkit-text-stroke: 2px #F78328;
+}
+
+
+
+.text-slide.left {
+    animation: moveLeft 25s linear infinite;
+    will-change: transform;
+}
+
+
+
+.text-slide.right {
+    animation: moveRight 25s linear infinite;
+    will-change: transform;
+}
