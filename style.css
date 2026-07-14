@@ -1,40 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Geist+Pixel&family=Pixelify+Sans:wght@400..700&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
 
 /* other css files imports */
 
 @import url("css/beginningAnimation.css");
-
-@font-face {
-    font-family: 'Karmatic Arcade';
-    src: url('assets/typography/ka1.woff2') format('woff2'),
-         url('assets/typography/ka1.woff') format('woff'),
-         url('assets/typography/ka1.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Broken Console';
-    src: url('assets/typography/Broken\ Console\ Bold.woff2') format('woff2'),
-         url('assets/typography/Broken\ Console\ Bold.woff') format('woff'),
-         url('assets/typography/Broken\ Console\ Bold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: '3D Thirteen Pixel Fonts';
-    src: url('assets/typography/3D-Thirteen-Pixel-Fonts.woff2') format('woff2'),
-         url('assets/typography/3D-Thirteen-Pixel-Fonts.woff') format('woff'),
-         url('assets/typography/3D-Thirteen-Pixel-Fonts.ttf') format('truetype');
-}
-
-@font-face {
-    font-family: 'Minecraftory';
-    src: url('assets/typography/Minercraftory.woff2') format('woff2'),
-         url('assets/typography/Minercraftory.woff') format('woff'),
-         url('assets/typography/Minercraftory.ttf') format('truetype');
-}
+@import url("css/header.css");
 
 @font-face {
     font-family: 'Poxast Regular';
@@ -46,14 +18,15 @@
 /* reusable CSS variables across all files */
 
 :root {
-    /*--playfair-display: "Playfair Display", serif;
-    --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;*/
-    --karmatic-arcade: "Karmatic Arcade", normal;
-    --broken-console: "Broken Console", normal;
-    --threeD-Thirteen-Pixel-Fonts: "3D Thirteen Pixel Fonts";
+
     --poxast-regular: "Poxast Regular", normal;
+    --geist-pixel:"Pixelify Sans", sans-serif;
+    --mozilla-text: "Mozilla Text", sans-serif;
+    --story-script: "Story Script", sans-serif;
+    --bubblegum-sans: "Bubblegum Sans", sans-serif;
 
     --sad-color: #121212;
+    --sad-colortwo: #1e1e2e;
 
     --black-200: #020202;
     --black-500: #555555;
@@ -69,5 +42,5 @@
 }
 
 body {
-    background-color: var(--sad-color);
+    background-color: var(--sad-colortwo);
 }

@@ -6,7 +6,7 @@
     justify-content: center;
     gap: 80px;
     padding: 60px 0;
-    background-color: #121212;
+    background-color: var(--sad-colortwo);
 }
 
 
@@ -45,7 +45,7 @@
     padding-right: 45px;
 }
 
-.icon-track i.fa-github:hover { color: #2a2a2a; }
+.icon-track i.fa-github:hover { color: #000000; }
 .icon-track i.fa-html5:hover { color: #CC4622; }
 .icon-track i.fa-css3-alt:hover { color: #1265A0; }
 .icon-track i.fa-square-js:hover { color: #DBC218; }
