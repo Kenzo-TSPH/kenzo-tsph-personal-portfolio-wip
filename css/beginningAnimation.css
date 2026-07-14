@@ -39,19 +39,23 @@
     transition: color 0.3s ease;
 }
 
+.icon-track i[class*="devicon-"] {
+    font-size: 70px;
+    line-height: 1;
+    padding-right: 45px;
+}
+
 .icon-track i.fa-github:hover { color: #2a2a2a; }
 .icon-track i.fa-html5:hover { color: #CC4622; }
 .icon-track i.fa-css3-alt:hover { color: #1265A0; }
 .icon-track i.fa-square-js:hover { color: #DBC218; }
 .icon-track i.fa-twitch:hover { color: #7F3DE2; }
-.icon-track i.fa-tiktok:hover { color: #E0274A; }
-
 .icon-track i.fa-node-js:hover { color: #2B852B; }
 .icon-track i.fa-java:hover { color: #006384; }
 .icon-track i.fa-figma:hover { color: #D6441B; }
-.icon-track i.fa-flutter:hover { color: #014B87; }
+.icon-track i.devicon-flutter-plain:hover { color: #014B87; }
 .icon-track i.fa-instagram:hover { color: #CC3853; }
-.icon-track i.fa-youtube:hover { color: #b10000; }
+.icon-track i.devicon-vscode-plain:hover { color: #007ACC; }
 
 .icon-set i:last-child {
     margin-right: 80px;
