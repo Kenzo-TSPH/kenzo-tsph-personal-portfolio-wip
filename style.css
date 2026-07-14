@@ -2,6 +2,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Mozilla+Text:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Story+Script&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&display=swap');
 
 /* other css files imports */
 
@@ -24,6 +26,8 @@
     --mozilla-text: "Mozilla Text", sans-serif;
     --story-script: "Story Script", sans-serif;
     --bubblegum-sans: "Bubblegum Sans", sans-serif;
+    --space-grotesk: "Space Grotesk", sans-serif;
+    --instrument-serif: "Instrument Serif", serif;
 
     --sad-color: #121212;
     --sad-colortwo: #1e1e2e;

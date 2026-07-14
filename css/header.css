@@ -6,6 +6,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 10px;
 }
 
 .header-container .title-group {
@@ -15,7 +16,7 @@
 }
 
 .header-container h1 {
-    font-family: var(--bubblegum-sans);
+    font-family: var(--space-grotesk);
     color: #ffffff;
     opacity: 0.8;
     user-select: none;
@@ -25,14 +26,15 @@
 
 .header-container h3 {
     font-family: var(--mozilla-text);
-    color: rgb(160, 160, 160, 0.8);
+    color: #ffffff;
     white-space: nowrap;
     word-spacing: 2px;
     user-select: none;
+    opacity: 0.5;
 }
 
 .title-group{
-    padding-left: 10%;
+    padding-left: 7%;
 }
 
 .nav-links {
@@ -46,7 +48,7 @@
     font-family: var(--mozilla-text);
     color: #ffffff;
     text-decoration: none;
-    opacity: 0.7;
+    opacity: 0.6;
 }
 
 .green-bulb {
