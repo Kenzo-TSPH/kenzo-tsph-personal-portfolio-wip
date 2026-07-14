@@ -1,15 +1,57 @@
-/*@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&display=swap");*/
+@import url('https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&family=VT323&display=swap');
 
 /* other css files imports */
 
 @import url("css/beginningAnimation.css");
+
+@font-face {
+    font-family: 'Karmatic Arcade';
+    src: url('assets/typography/ka1.woff2') format('woff2'),
+         url('assets/typography/ka1.woff') format('woff'),
+         url('assets/typography/ka1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Broken Console';
+    src: url('assets/typography/Broken\ Console\ Bold.woff2') format('woff2'),
+         url('assets/typography/Broken\ Console\ Bold.woff') format('woff'),
+         url('assets/typography/Broken\ Console\ Bold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '3D Thirteen Pixel Fonts';
+    src: url('assets/typography/3D-Thirteen-Pixel-Fonts.woff2') format('woff2'),
+         url('assets/typography/3D-Thirteen-Pixel-Fonts.woff') format('woff'),
+         url('assets/typography/3D-Thirteen-Pixel-Fonts.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Minecraftory';
+    src: url('assets/typography/Minercraftory.woff2') format('woff2'),
+         url('assets/typography/Minercraftory.woff') format('woff'),
+         url('assets/typography/Minercraftory.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Poxast Regular';
+    src: url('assets/typography/Poxast-Regular.woff2') format('woff2'),
+         url('assets/typography/Poxast-Regular.woff') format('woff'),
+         url('assets/typography/Poxast-Regular.ttf') format('truetype');
+}
 
 /* reusable CSS variables across all files */
 
 :root {
     /*--playfair-display: "Playfair Display", serif;
     --plus-jakarta-sans: "Plus Jakarta Sans", sans-serif;*/
+    --karmatic-arcade: "Karmatic Arcade", normal;
+    --broken-console: "Broken Console", normal;
+    --threeD-Thirteen-Pixel-Fonts: "3D Thirteen Pixel Fonts";
+    --poxast-regular: "Poxast Regular", normal;
 
     --sad-color: #121212;
 

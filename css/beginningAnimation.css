@@ -136,6 +136,7 @@
     flex-direction: column;
     gap: 20px;
     overflow: hidden;
+    font-family: var(--poxast-regular);
 }
 
 
@@ -149,10 +150,10 @@
 
     color: transparent;
 
-    -webkit-text-stroke: 4px rgba(255, 255, 255, 1);
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 1);
 
-    font-size: clamp(70px, 10vw, 150px);
-
+    font-size: clamp(24px, 3vw, 48px);
+    
     font-weight: 800;
 
     margin: 0;
@@ -166,34 +167,24 @@
 
 }
 
-.text-slide h1:hover {
-
-    color: #ffffff;
-
-    -webkit-text-stroke: 4px rgba(185,80,0,.65);
-
-    font-size: clamp(70px, 10vw, 150px);
-
-    font-weight: 800;
-
-    margin: 0;
-
-    padding-right: 80px;
-
-    white-space: nowrap;
-
-    opacity: 0.8;
-
-}
-
 .text-slide h1 span.outline {
     color: transparent;
 -webkit-text-stroke: 2px rgba(255, 111, 0,0.8);
 }
 
 .text-slide h1 span.outline:hover {
-color: rgba(255, 111, 0,0.8);
--webkit-text-stroke: 2px rgba(255, 255, 255, 0.8);
+color: rgba(255, 111, 0,1);
+-webkit-text-stroke: 2px rgba(255, 255, 255, 1);
+}
+
+.text-slide h1 span.rest {
+    color: transparent;
+-webkit-text-stroke: 2px rgba(255, 255, 255, 1);
+}
+
+.text-slide h1 span.rest:hover {
+color: #ffffff;
+-webkit-text-stroke: 2px rgba(255, 111, 0,0.8);
 }
 
 
