@@ -13,17 +13,17 @@ document.addEventListener('DOMContentLoaded', function () {
             if (charIndex < greetingText.length) {
                 greetingPart.textContent += greetingText[charIndex];
                 charIndex++;
-                setTimeout(typeWriter, 60);
+                setTimeout(typeWriter, 30);
             } else {
                 isTypingName = true;
                 charIndex = 0;
-                setTimeout(typeWriter, 60);
+                setTimeout(typeWriter, 30);
             }
         } else {
             if (charIndex < nameText.length) {
                 namePart.textContent += nameText[charIndex];
                 charIndex++;
-                setTimeout(typeWriter, 80);
+                setTimeout(typeWriter, 50);
             } else {
                 document.querySelector('.cursor').style.display = 'none';
             }
