@@ -41,6 +41,11 @@
     user-select: none;
 }
 
+.aboutMe-rightSide{
+    flex: 1;
+    padding-right: 7rem;
+}
+
 .aboutMe-description-rightSide {
     flex: 1;
     padding-left: 190px;
@@ -65,4 +70,51 @@
     font-weight: 400;
     font-size: 1.4rem;
     user-select: none;
+}
+
+.mySocials-rightSide-Bottom {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 2.5rem;
+    margin-left: 1.5px;
+}
+
+.mySocials-rightSide-Bottom a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #e0e0e0;
+    font-size: 1.6rem;
+    transition: color 0.3s ease;
+}
+
+.mySocials-rightSide-Bottom #moreAboutMe{
+    font-family: var(--dm-sans);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.mySocials-rightSide-Bottom a:hover {
+    color: rgba(255, 145, 61, 0.8);
+}
+
+.mySocials-rightSide-Bottom .resume-btn {
+    background: var(--sad-colortwo);
+    color: #e0e0e0;
+    padding: 0.6rem 1.4rem;
+    border: 1.5px solid rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    font-family: var(--dm-sans);
+    font-size: 1rem;
+    font-weight: 600;
+    gap: 1rem;
+    transition: background 0.3s ease, border-color 0.3s ease, color 0.3s ease;       
+}
+
+.mySocials-rightSide-Bottom .resume-btn:hover{
+     color: #e0e0e0;
+    border: 1.5px solid rgba(255, 255, 255, 0.1);
+    background: rgba(255, 255, 255, 0.1);
 }
