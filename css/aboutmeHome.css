@@ -64,6 +64,17 @@
     color: rgba(255, 145, 61, 0.8);
 }
 
+.cursor {
+    color: #e0e0e0;
+    animation: blink 0.7s step-end infinite;
+    font-family: var(--bitcoin-prop-single);
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
 .aboutMe-description-rightSide h3 {
     font-family: var(--dm-sans);
     color: #d3d3d3;
