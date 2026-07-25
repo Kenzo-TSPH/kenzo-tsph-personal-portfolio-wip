@@ -207,7 +207,7 @@
 }
 
 .mySocials-rightSide-Bottom #moreAboutMe:hover .arrow-icon {
-    transform: translateX(5px);
+    transform: translateX(3px);
     filter: brightness(0) saturate(100%) invert(59%) sepia(67%) saturate(711%) hue-rotate(346deg) brightness(107%) contrast(102%);
 }
 
