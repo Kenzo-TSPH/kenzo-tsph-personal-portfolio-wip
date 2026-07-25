@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', function () {
             if (charIndex < greetingText.length) {
                 greetingPart.textContent += greetingText[charIndex];
                 charIndex++;
-                setTimeout(typeWriter, 30);
+                setTimeout(typeWriter, 35);
             } else {
                 isTypingName = true;
                 charIndex = 0;
-                setTimeout(typeWriter, 30);
+                setTimeout(typeWriter, 35);
             }
         } else {
             if (charIndex < nameText.length) {
