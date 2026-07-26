@@ -38,6 +38,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const profile = document.querySelector(".profile-leftSide");
     const ring = document.querySelector(".ring-progress");
     const coin = document.querySelector(".coin");
+    const frontFace = document.querySelector(".front-face");
+    const backFace = document.querySelector(".back-face");
 
     const radius = 244;
     const circumference = 2 * Math.PI * radius;
@@ -66,7 +68,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     coin.offsetHeight;
 
-    coin.style.animation = "spin 3s ease-in-out forwards";
+    coin.style.animation = "spin 1.5s ease-in-out forwards";
+
+    frontFace.style.animation = "none";
+    backFace.style.animation = "none";
+
+    frontFace.offsetHeight;
+
+    frontFace.style.animation = "swapFront 1.6s linear forwards";
+    backFace.style.animation = "swapBack 1.6s linear forwards";
 
     });
 
