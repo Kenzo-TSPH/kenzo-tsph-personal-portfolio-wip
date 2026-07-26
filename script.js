@@ -32,3 +32,50 @@ document.addEventListener('DOMContentLoaded', function () {
 
     typeWriter();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const profile = document.querySelector(".profile-leftSide");
+    const ring = document.querySelector(".ring-progress");
+    const coin = document.querySelector(".coin");
+
+    const radius = 244;
+    const circumference = 2 * Math.PI * radius;
+
+    ring.style.transition = "none";
+    ring.style.strokeDasharray = circumference;
+    ring.style.strokeDashoffset = circumference;
+
+    requestAnimationFrame(() => {
+        ring.style.transition = "stroke-dashoffset 2s linear";
+    });
+
+    profile.addEventListener("mouseenter", () => {
+
+    ring.style.transition = "stroke-dashoffset 2s linear";
+
+    ring.style.strokeDashoffset = 0;
+
+    });
+
+    ring.addEventListener("transitionend", () => {
+
+    if (ring.style.strokeDashoffset !== "0") return;
+
+    coin.style.animation = "none";
+
+    coin.offsetHeight;
+
+    coin.style.animation = "spin 3s ease-in-out forwards";
+
+    });
+
+    profile.addEventListener("mouseleave", () => {
+
+    ring.style.transition = "none";
+
+    ring.style.strokeDashoffset = circumference;
+
+    });
+
+});

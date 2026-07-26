@@ -55,13 +55,8 @@
     stroke-dasharray:1533;
 
     stroke-dashoffset:1533;
-
+    
     transition:stroke-dashoffset 2s linear;
-}
-
-.profile-leftSide:hover .ring-progress{
-
-    stroke-dashoffset:0;
 }
 
 .profile-leftSide img {
@@ -81,10 +76,7 @@
     border-radius: 50%;
     overflow: hidden;
     animation: none;
-}
-
-.profile-leftSide.flip .coin {
-    animation-name: flip;
+    animation-fill-mode:forwards;
 }
 
 .profile-leftSide img[alt="Profile Background"] {
