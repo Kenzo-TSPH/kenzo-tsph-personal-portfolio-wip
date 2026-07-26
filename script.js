@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const radius = 244;
     const circumference = 2 * Math.PI * radius;
 
+    let isCoolingDown = false;
+    let cooldownTimer;
+
     ring.style.transition = "none";
     ring.style.strokeDasharray = circumference;
     ring.style.strokeDashoffset = circumference;
@@ -53,6 +56,8 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
     profile.addEventListener("mouseenter", () => {
+
+    if (isCoolingDown) return;
 
     ring.style.transition = "stroke-dashoffset 2s linear";
 
@@ -78,9 +83,44 @@ document.addEventListener("DOMContentLoaded", () => {
     frontFace.style.animation = "swapFront 1.6s linear forwards";
     backFace.style.animation = "swapBack 1.6s linear forwards";
 
-    });
+    isCoolingDown = true;
+    ring.style.animation = "ringCooldown 10s linear forwards";
+
+    clearTimeout(cooldownTimer);
+
+    cooldownTimer = setTimeout(() => {
+
+    // Everything after 10 seconds goes here
+    coin.style.animation = "none";
+    
+    coin.offsetHeight;
+
+    coin.style.animation = "flip 1.5s ease-in-out reverse forwards";
+
+    frontFace.style.animation = "none";
+    backFace.style.animation = "none";
+    
+    frontFace.offsetHeight;
+    
+    frontFace.style.animation = "swapBack 1.6s linear forwards";
+    backFace.style.animation = "swapFront 1.6s linear forwards";
+
+    ring.style.animation = "none";
+
+    ring.style.stroke = "";
+
+    ring.style.transition = "none";
+    ring.style.strokeDashoffset = circumference;
+
+    isCoolingDown = false;
+
+}, 10000);
+
+});
 
     profile.addEventListener("mouseleave", () => {
+
+    if (isCoolingDown) return;
 
     ring.style.transition = "none";
 

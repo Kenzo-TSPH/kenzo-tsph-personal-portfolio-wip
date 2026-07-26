@@ -1,3 +1,15 @@
+@keyframes ringCooldown {
+
+    from{
+        stroke:#ffa019;
+    }
+
+    to{
+        stroke:#808080;
+    }
+
+}
+
 @keyframes tarekFadesSlideIn {
     0% {
         opacity: 0;
