@@ -99,9 +99,21 @@
   }
 }
 
+@keyframes swapFront {
+    0%, 24.999% { opacity: 1; }
+    25%, 74.999% { opacity: 0; }
+    75%, 100% { opacity: 1; }
+}
+
+@keyframes swapBack {
+    0%, 24.999% { opacity: 0; }
+    25%, 74.999% { opacity: 1; }
+    75%, 100% { opacity: 0; }
+}
+
 @keyframes flip {
-  0% {
-    height: var(--coin-size);
+   0% {
+     height: var(--coin-size);
     box-shadow:
       0 0 0 var(--side-dark);
     animation-timing-function: ease-in;
