@@ -48,6 +48,11 @@
 
     --color-warmamber: #F78328;
     --color-darkerorange: #C76E00;
+    --coin-side-color: #ffa019;
+    --coin-size: 480px;
+    --side: var(--coin-side-color);
+    --side-dark: #b37000;
+    --lowlight: #cc7a00;
 
     --color-backgroundwithmyorangeheader: #f3e8d8;
 }

@@ -1,3 +1,5 @@
+@import url('aboutmeAnimations.css');
+
 .about-me {
     display: flex;
     align-items: center;
@@ -24,6 +26,21 @@
     height: 100%;
 }
 
+.profile-leftSide .coin {
+    position: absolute;
+    top: 0; left: 0; right: 0; bottom: 0;
+    margin: auto;
+    width: var(--coin-size);
+    height: var(--coin-size);
+    border-radius: 50%;
+    overflow: hidden;
+    animation: spin 1.5s linear infinite;
+}
+
+.profile-leftSide.flip .coin {
+    animation-name: flip;
+}
+
 .profile-leftSide img[alt="Profile Background"] {
     object-fit: cover;
     filter: blur(3px);
@@ -42,17 +59,6 @@
     opacity: 0;
     animation: tarekFadesSlideIn 1.3s ease forwards;
     animation-delay: 0.2s;
-}
-
-@keyframes tarekFadesSlideIn {
-    0% {
-        opacity: 0;
-        transform: translate(-50%, 20%) scale(1.2);
-    }
-    100% {
-        opacity: 1;
-        transform: translate(-50%, -50%) scale(1.2);
-    }
 }
 
 .aboutMe-rightSide{
@@ -84,11 +90,6 @@
     font-family: var(--bitcoin-prop-single);
 }
 
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
 .aboutMe-description-rightSide h3 {
     font-family: var(--dm-sans);
     color: #d3d3d3;
@@ -98,28 +99,6 @@
     opacity: 0;
     animation: fadeSlideRight 1.2s ease forwards;
     animation-delay: 0.3s;
-}
-
-@keyframes fadeSlideRight {
-    0% {
-        opacity: 0;
-        transform: translateX(60px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
-}
-
-@keyframes fadeSlideLeft {
-    0% {
-        opacity: 0;
-        transform: translateX(-60px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(0);
-    }
 }
 
 .mySocials-rightSide-Bottom {
