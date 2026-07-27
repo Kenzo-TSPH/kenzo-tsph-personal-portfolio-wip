@@ -147,8 +147,8 @@
     word-spacing: 2px;
 }
 
-.aboutMe-text.highlighting{
-    transition:color .45s ease;
+.aboutMe-text{
+    transition:color 1.3s ease;
 }
 
 .aboutMe-text.dimmed{
@@ -199,7 +199,7 @@
 
     font-weight:400;
 
-    transition: color .45s ease, font-weight .45s ease;
+    transition: color 1.3s ease, font-weight .8s ease;
 }
 
 .aboutMe-text.highlighting .highlight-word{
