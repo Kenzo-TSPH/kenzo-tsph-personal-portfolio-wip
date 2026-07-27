@@ -44,6 +44,9 @@ document.addEventListener("DOMContentLoaded", () => {
     const radius = 244;
     const circumference = 2 * Math.PI * radius;
 
+    const words = document.querySelectorAll(".highlight-word");
+    const paragraph = document.querySelector(".aboutMe-text");
+
     let isCoolingDown = false;
     let cooldownTimer;
 
@@ -54,6 +57,13 @@ document.addEventListener("DOMContentLoaded", () => {
     requestAnimationFrame(() => {
         ring.style.transition = "stroke-dashoffset 2s linear";
     });
+
+    function startHighlightAnimation(){
+
+    paragraph.classList.add("dimmed");
+    paragraph.classList.add("highlighting");
+
+   }
 
     profile.addEventListener("mouseenter", () => {
 
@@ -83,6 +93,8 @@ document.addEventListener("DOMContentLoaded", () => {
     frontFace.style.animation = "swapFront 1.6s linear forwards";
     backFace.style.animation = "swapBack 1.6s linear forwards";
 
+    startHighlightAnimation();
+
     isCoolingDown = true;
     ring.style.animation = "ringCooldown 10s linear forwards";
 
@@ -90,12 +102,13 @@ document.addEventListener("DOMContentLoaded", () => {
 
     cooldownTimer = setTimeout(() => {
 
-    // Everything after 10 seconds goes here
+    // Everything after 10 seconds
+
     coin.style.animation = "none";
     
     coin.offsetHeight;
 
-    coin.style.animation = "flip 1.5s ease-in-out reverse forwards";
+    coin.style.animation = "spin 1.5s ease-in-out forwards";
 
     frontFace.style.animation = "none";
     backFace.style.animation = "none";
@@ -104,6 +117,10 @@ document.addEventListener("DOMContentLoaded", () => {
     
     frontFace.style.animation = "swapBack 1.6s linear forwards";
     backFace.style.animation = "swapFront 1.6s linear forwards";
+
+    paragraph.classList.remove("dimmed");
+    
+    paragraph.classList.remove("highlighting");
 
     ring.style.animation = "none";
 

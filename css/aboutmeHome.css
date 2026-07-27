@@ -144,6 +144,70 @@
     opacity: 0;
     animation: fadeSlideRight 1.2s ease forwards;
     animation-delay: 0.3s;
+    word-spacing: 2px;
+}
+
+.aboutMe-text.highlighting{
+    transition:color .45s ease;
+}
+
+.aboutMe-text.dimmed{
+
+    color:#8f8f8f;
+
+}
+
+
+.aboutMe-text.highlighting .highlight-word::before{
+
+    transform:scaleX(1);
+
+}
+
+.highlight-word::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:8%;
+
+    left:-4px;
+
+    width:calc(100% + 8px);
+
+    height:84%;
+
+    background:#cc5c00;
+
+    z-index:-1;
+
+    transform:scaleX(0);
+    
+    transform-origin:left;
+    
+    transition: transform .7s ease;
+
+}
+
+.highlight-word{
+    position:relative;
+    display:inline-block;
+    z-index:1;
+
+    color:inherit;
+
+    font-weight:400;
+
+    transition: color .45s ease, font-weight .45s ease;
+}
+
+.aboutMe-text.highlighting .highlight-word{
+
+    color:#f3f3f3;
+
+    font-weight:600;
+
 }
 
 .mySocials-rightSide-Bottom {
