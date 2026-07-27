@@ -148,7 +148,7 @@
 }
 
 .aboutMe-text{
-    transition:color 1.3s ease;
+    transition:color 2.3s ease;
 }
 
 .aboutMe-text.dimmed{
@@ -199,7 +199,7 @@
 
     font-weight:400;
 
-    transition: color 1.3s ease, font-weight .8s ease;
+    transition: color 2.3s ease, font-weight 1.3s ease;
 }
 
 .aboutMe-text.highlighting .highlight-word{
