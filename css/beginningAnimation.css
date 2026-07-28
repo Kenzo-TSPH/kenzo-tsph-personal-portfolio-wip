@@ -23,13 +23,13 @@
 }
 
 .animation-container-beginning {
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 80px;
-    padding: 60px 0;
+    gap: 20px;
+    padding: 40px 0;
     background-color: var(--sad-colortwo);
 }
 
@@ -51,8 +51,8 @@
 }
 
 .icon-track i {
-    width:90px;
-    height: 90px;
+    width:72px;
+    height: 72px;
 
     text-align: center;
 
@@ -63,7 +63,7 @@
     flex-shrink: 0;
 
     color: #d4d4d4;
-    font-size: 70px;
+    font-size: 56px;
 
     transition: color 0.3s ease;
 }
@@ -148,7 +148,7 @@
 
     -webkit-text-stroke: 2px rgba(255, 255, 255, 1);
 
-    font-size: clamp(24px, 3vw, 48px);
+    font-size: clamp(20px, 2.3vw, 34px);
     
     font-weight: 800;
 
