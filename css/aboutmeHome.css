@@ -4,7 +4,10 @@
     display: flex;
     align-items: center;
     gap: 7rem;
-    padding: 9rem 7rem;
+    padding-top: 9rem;
+    padding-right: 7rem;
+    padding-bottom: 9rem;
+    padding-left: 7rem;
 }
 
 .profile-leftSide {
@@ -148,7 +151,7 @@
 }
 
 .aboutMe-text{
-    transition:color 2.3s ease;
+    transition:color 2s ease;
 }
 
 .aboutMe-text.dimmed{
@@ -178,7 +181,7 @@
 
     height:84%;
 
-    background:#cc5c00;
+    background:#ff6700;
 
     z-index:-1;
 
@@ -199,7 +202,7 @@
 
     font-weight:400;
 
-    transition: color 2.3s ease, font-weight 1.3s ease;
+    transition: color 2s ease, font-weight 1s ease;
 }
 
 .aboutMe-text.highlighting .highlight-word{

@@ -58,91 +58,208 @@ document.addEventListener("DOMContentLoaded", () => {
         ring.style.transition = "stroke-dashoffset 2s linear";
     });
 
-    function startHighlightAnimation(){
+    function startHighlightAnimation() {
 
-    paragraph.classList.add("dimmed");
-    paragraph.classList.add("highlighting");
+        paragraph.classList.add("dimmed");
+        paragraph.classList.add("highlighting");
 
-   }
+    }
 
     profile.addEventListener("mouseenter", () => {
 
-    if (isCoolingDown) return;
+        if (isCoolingDown) return;
 
-    ring.style.transition = "stroke-dashoffset 2s linear";
+        ring.style.transition = "stroke-dashoffset 2s linear";
 
-    ring.style.strokeDashoffset = 0;
+        ring.style.strokeDashoffset = 0;
 
     });
 
     ring.addEventListener("transitionend", () => {
 
-    if (ring.style.strokeDashoffset !== "0") return;
+        if (ring.style.strokeDashoffset !== "0") return;
 
-    coin.style.animation = "none";
+        coin.style.animation = "none";
 
-    coin.offsetHeight;
+        coin.offsetHeight;
 
-    coin.style.animation = "spin 1.5s ease-in-out forwards";
+        coin.style.animation = "spin 1.5s ease-in-out forwards";
 
-    frontFace.style.animation = "none";
-    backFace.style.animation = "none";
+        frontFace.style.animation = "none";
+        backFace.style.animation = "none";
 
-    frontFace.offsetHeight;
+        frontFace.offsetHeight;
 
-    frontFace.style.animation = "swapFront 1.6s linear forwards";
-    backFace.style.animation = "swapBack 1.6s linear forwards";
+        frontFace.style.animation = "swapFront 1.6s linear forwards";
+        backFace.style.animation = "swapBack 1.6s linear forwards";
 
-    startHighlightAnimation();
+        startHighlightAnimation();
 
-    isCoolingDown = true;
-    ring.style.animation = "ringCooldown 10s linear forwards";
+        isCoolingDown = true;
+        ring.style.animation = "ringCooldown 10s linear forwards";
 
-    clearTimeout(cooldownTimer);
+        clearTimeout(cooldownTimer);
 
-    cooldownTimer = setTimeout(() => {
+        cooldownTimer = setTimeout(() => {
 
-    // Everything after 10 seconds
+            // Everything after 10 seconds
 
-    coin.style.animation = "none";
-    
-    coin.offsetHeight;
+            coin.style.animation = "none";
 
-    coin.style.animation = "spin 1.5s ease-in-out forwards";
+            coin.offsetHeight;
 
-    frontFace.style.animation = "none";
-    backFace.style.animation = "none";
-    
-    frontFace.offsetHeight;
-    
-    frontFace.style.animation = "swapBack 1.6s linear forwards";
-    backFace.style.animation = "swapFront 1.6s linear forwards";
+            coin.style.animation = "spin 1.5s ease-in-out forwards";
 
-    paragraph.classList.remove("dimmed");
-    
-    paragraph.classList.remove("highlighting");
+            frontFace.style.animation = "none";
+            backFace.style.animation = "none";
 
-    ring.style.animation = "none";
+            frontFace.offsetHeight;
 
-    ring.style.stroke = "";
+            frontFace.style.animation = "swapBack 1.6s linear forwards";
+            backFace.style.animation = "swapFront 1.6s linear forwards";
 
-    ring.style.transition = "none";
-    ring.style.strokeDashoffset = circumference;
+            paragraph.classList.remove("dimmed");
 
-    isCoolingDown = false;
+            paragraph.classList.remove("highlighting");
 
-}, 10000);
+            ring.style.animation = "none";
 
-});
+            ring.style.stroke = "";
+
+            ring.style.transition = "none";
+            ring.style.strokeDashoffset = circumference;
+
+            isCoolingDown = false;
+
+        }, 10000);
+
+    });
 
     profile.addEventListener("mouseleave", () => {
 
-    if (isCoolingDown) return;
+        if (isCoolingDown) return;
 
-    ring.style.transition = "none";
+        ring.style.transition = "none";
 
-    ring.style.strokeDashoffset = circumference;
+        ring.style.strokeDashoffset = circumference;
 
+    });
+
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const marquees = [
+
+        {
+            element: document.querySelector(".upper-icons .icon-track"),
+            speed: 0.9,
+            direction: 1
+        },
+
+        {
+            element: document.querySelector(".lower-icons .icon-track"),
+            speed: 0.9,
+            direction: -1
+        },
+
+        {
+            element: document.querySelector(".text-slide.left"),
+            speed: 1.2,
+            direction: -1
+        },
+
+        {
+            element: document.querySelector(".text-slide.right"),
+            speed: 1.2,
+            direction: 1
+        }
+
+    ];
+
+    marquees.forEach(marquee => {
+
+        marquee.position = 0;
+        marquee.targetSpeed = marquee.speed;
+        marquee.currentSpeed = marquee.speed;
+
+    });
+
+    marquees.forEach(marquee => {
+
+        const halfWidth = marquee.element.scrollWidth / 2;
+
+        if (marquee.direction === 1) {
+            marquee.position = -halfWidth;
+        }
+
+    });
+
+    function animate() {
+
+        marquees.forEach(marquee => {
+
+            marquee.currentSpeed +=
+                (marquee.targetSpeed - marquee.currentSpeed) * 0.08;
+
+            marquee.position +=
+                marquee.currentSpeed * marquee.direction;
+
+            const halfWidth = marquee.element.scrollWidth / 2;
+
+            if (marquee.direction === -1 && marquee.position <= -halfWidth) {
+                marquee.position = 0;
+            }
+
+            if (marquee.direction === 1 && marquee.position >= 0) {
+                marquee.position = -halfWidth;
+            }
+
+            marquee.element.style.transform =
+                `translateX(${marquee.position}px)`;
+
+        });
+
+        requestAnimationFrame(animate);
+
+    }
+
+    animate();
+
+    const upperIcons = document.querySelector(".upper-icons");
+    const lowerIcons = document.querySelector(".lower-icons");
+    const textRows = document.querySelectorAll(".text-row");
+
+    upperIcons.addEventListener("mouseenter", () => {
+        marquees[0].targetSpeed = 0;
+    });
+
+    upperIcons.addEventListener("mouseleave", () => {
+        marquees[0].targetSpeed = marquees[0].speed;
+    });
+
+    lowerIcons.addEventListener("mouseenter", () => {
+        marquees[1].targetSpeed = 0;
+    });
+
+    lowerIcons.addEventListener("mouseleave", () => {
+        marquees[1].targetSpeed = marquees[1].speed;
+    });
+
+    textRows[0].addEventListener("mouseenter", () => {
+        marquees[2].targetSpeed = 0;
+    });
+
+    textRows[0].addEventListener("mouseleave", () => {
+        marquees[2].targetSpeed = marquees[2].speed;
+    });
+
+    textRows[1].addEventListener("mouseenter", () => {
+        marquees[3].targetSpeed = 0;
+    });
+
+    textRows[1].addEventListener("mouseleave", () => {
+        marquees[3].targetSpeed = marquees[3].speed;
     });
 
 });

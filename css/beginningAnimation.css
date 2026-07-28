@@ -1,3 +1,27 @@
+@keyframes moveRight {
+
+    from {
+        transform: translateX(-25%);
+    }
+
+    to {
+        transform: translateX(0);
+    }
+
+}
+
+@keyframes moveLeft {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-25%);
+    }
+
+}
+
 .animation-container-beginning {
     height: 100vh;
     overflow: hidden;
@@ -17,24 +41,47 @@
 
 .icon-track {
     display: flex;
-    width: max-content;
+    width: fit-content;
 }
 
 .icon-set {
     display: flex;
-    gap: 120px;
+    align-items:center;
+    gap:80px;
 }
 
 .icon-track i {
+    width:90px;
+    height: 90px;
+
+    text-align: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-shrink: 0;
+
     color: #d4d4d4;
     font-size: 70px;
+
     transition: color 0.3s ease;
 }
 
 .icon-track i[class*="devicon-"] {
-    font-size: 70px;
     line-height: 1;
-    padding-right: 45px;
+}
+
+.devicon-flutter-plain{
+    padding-right:90px;
+    margin-left: 27px;
+    margin-right: 27px;
+}
+
+.devicon-vscode-plain{
+    padding-right:90px;
+    margin-left: 27px;
+    margin-right: 27px;
 }
 
 .icon-track i.fa-github:hover { color: #000000; }
@@ -48,10 +95,6 @@
 .icon-track i.devicon-flutter-plain:hover { color: #014B87; }
 .icon-track i.fa-instagram:hover { color: #CC3853; }
 .icon-track i.devicon-vscode-plain:hover { color: #007ACC; }
-
-.icon-set i:last-child {
-    margin-right: 80px;
-}
 
 .marquee {
     mask-image: linear-gradient(
@@ -71,51 +114,17 @@
     );
 }
 
-/* move right */
-
-.marquee.right .icon-track {
-    animation: moveRight 20s linear infinite;
-    will-change: transform;
+.text-row {
+    overflow: hidden;
 }
 
-
-/* move left */
-
-.marquee.left .icon-track {
-    animation: moveLeft 20s linear infinite;
-    will-change: transform;
-}
-
-.upper-icons:hover .icon-track,
-.lower-icons:hover .icon-track,
-.text-slide.left:hover,
-.text-slide.right:hover {
+.text-row:hover .text-slide {
     animation-play-state: paused;
 }
 
-
-@keyframes moveRight {
-
-    from {
-        transform: translate3d(-25%, 0, 0);
-    }
-
-    to {
-        transform: translate3d(0, 0, 0);
-    }
-
-}
-
-@keyframes moveLeft {
-
-    from {
-        transform: translate3d(0, 0, 0);
-    }
-
-    to {
-        transform: translate3d(-25%, 0, 0);
-    }
-
+.upper-icons:hover .icon-track,
+.lower-icons:hover .icon-track {
+    animation-play-state: paused;
 }
 
 .animation-text {
@@ -123,12 +132,14 @@
     flex-direction: column;
     gap: 20px;
     overflow: hidden;
+    padding: 20px 0;
     font-family: var(--poxast-regular);
 }
 
 .text-slide {
     display: flex;
-    width: max-content;
+    width: fit-content;
+    padding: 10px 0;
 }
 
 .text-slide h1 {
@@ -170,14 +181,4 @@ color: rgba(255, 111, 0,1);
 .text-slide h1 span.rest:hover {
 color: #ffffff;
 -webkit-text-stroke: 2px rgba(255, 111, 0,0.8);
-}
-
-.text-slide.left {
-    animation: moveLeft 25s linear infinite;
-    will-change: transform;
-}
-
-.text-slide.right {
-    animation: moveRight 25s linear infinite;
-    will-change: transform;
 }
