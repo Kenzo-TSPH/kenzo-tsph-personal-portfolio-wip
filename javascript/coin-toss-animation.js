@@ -73,7 +73,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
             coin.offsetHeight;
 
-            coin.style.animation = "spin 1.5s ease-in-out forwards";
+            coin.style.animation = "spinReverseColor 1.5s ease-in-out forwards";
 
             frontFace.style.animation = "none";
             backFace.style.animation = "none";

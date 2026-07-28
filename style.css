@@ -53,6 +53,7 @@
     --side: var(--coin-side-color);
     --side-dark: #b37000;
     --lowlight: #cc7a00;
+    --coin-side-reversed: #808080;
 
     --color-backgroundwithmyorangeheader: #f3e8d8;
 }
