@@ -10,9 +10,9 @@
 
 /* other css files imports */
 
-@import url("css/beginningAnimation.css");
 @import url("css/header.css");
 @import url("css/aboutmeHome.css");
+@import url("css/beginningAnimation.css");
 
 @font-face {
     font-family: 'Poxast Regular';

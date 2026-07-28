@@ -46,8 +46,8 @@
 
 .icon-set {
     display: flex;
-    align-items:center;
-    gap:80px;
+    /*align-items:center;*/
+    gap:64px;
 }
 
 .icon-track i {
@@ -68,20 +68,22 @@
     transition: color 0.3s ease;
 }
 
+.icon-track img.pixelated-icon {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    display:block;
+}
+
 .icon-track i[class*="devicon-"] {
     line-height: 1;
 }
 
 .devicon-flutter-plain{
-    padding-right:90px;
-    margin-left: 27px;
-    margin-right: 27px;
+    margin-right: 70px;
 }
 
 .devicon-vscode-plain{
-    padding-right:90px;
-    margin-left: 27px;
-    margin-right: 27px;
+    margin-right: 70px;
 }
 
 .icon-track i.fa-github:hover { color: #000000; }
