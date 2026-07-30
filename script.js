@@ -51,4 +51,20 @@ document.addEventListener('DOMContentLoaded', function () {
                 avatarContainer.textContent = GITHUB_USERNAME.charAt(0).toUpperCase();
             });
     }
+
+    const repoStars = document.querySelector('.repo-stars');
+    if (repoStars) {
+        const repo = repoStars.dataset.repo;
+        fetch(`https://api.github.com/repos/${repo}`)
+            .then(res => {
+                if (!res.ok) throw new Error('GitHub API error');
+                return res.json();
+            })
+            .then(data => {
+                repoStars.querySelector('.star-count').textContent = data.stargazers_count;
+            })
+            .catch(() => {
+                repoStars.querySelector('.star-count').textContent = '0';
+            });
+    }
 });

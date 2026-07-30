@@ -22,6 +22,13 @@
          url('assets/typography/Poxast-Regular.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Press Start 2P VA V7';
+    src: url('assets/typography/PressStart2P-vaV7.woff2') format('woff2'),
+         url('assets/typography/PressStart2P-vaV7.woff') format('woff'),
+         url('assets/typography/PressStart2P-vaV7.ttf') format('truetype');
+}
+
 /* reusable CSS variables across all files */
 
 :root {
@@ -36,6 +43,7 @@
     --bitcoin-prop-single: "Bitcount Prop Single", swap;
     --dm-serif-display: "DM Serif Display", serif;
     --dm-sans: "DM Sans", sans-serif;
+    --press-start-2p: "Press Start 2P VA V7", normal;
 
     --sad-color: #121212;
     --sad-colortwo: #1e1e2e;
