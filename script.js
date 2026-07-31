@@ -36,20 +36,13 @@ document.addEventListener('DOMContentLoaded', function () {
     const avatarContainer = document.querySelector('.featured-projects .avatars');
 
     if (avatarContainer) {
-        fetch(`https://api.github.com/users/${GITHUB_USERNAME}`)
-            .then(res => {
-                if (!res.ok) throw new Error('GitHub API error');
-                return res.json();
-            })
-            .then(data => {
-                const img = document.createElement('img');
-                img.src = data.avatar_url;
-                img.alt = GITHUB_USERNAME;
-                avatarContainer.appendChild(img);
-            })
-            .catch(() => {
-                avatarContainer.textContent = GITHUB_USERNAME.charAt(0).toUpperCase();
-            });
+        const img = document.createElement('img');
+        img.src = `https://github.com/${GITHUB_USERNAME}.png`;
+        img.alt = GITHUB_USERNAME;
+        img.onerror = () => {
+            avatarContainer.textContent = GITHUB_USERNAME.charAt(0).toUpperCase();
+        };
+        avatarContainer.appendChild(img);
     }
 
     const repoStars = document.querySelector('.repo-stars');

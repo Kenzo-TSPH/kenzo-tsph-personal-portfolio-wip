@@ -19,7 +19,9 @@
 }
 
 .featured-projects {
-    padding: 8rem 7rem;
+    padding: 0.5rem 7rem;
+    padding-bottom: 8rem;
+    padding-top: 0rem;
 }
 
 /* ===========================================
@@ -100,6 +102,19 @@
     padding-left: 2.3rem;
     padding-right: 2.3rem;
     border-radius: 22px;
+    transition: border .4s ease;
+}
+
+.project-card:hover {
+    border: 1px solid rgba(255, 145, 61, 0.8);
+}
+
+.project-card:hover .project-preview {
+    transform: scale(1.04);
+}
+
+.project-card:hover .project-info h2 {
+    color: rgba(255, 145, 61, 0.8);
 }
 
 /* ===========================================
@@ -112,10 +127,6 @@
     border-radius: 22px;
     background: #111111;
     transition: transform .4s ease;
-}
-
-.project-preview:hover {
-    transform: scale(1.04);
 }
 
 /* ===========================================
@@ -274,6 +285,7 @@
 .project-info h2 {
 
     color: white;
+    transition: color .4s ease;
 
     font-size: 1.6rem;
     font-family: var(--press-start-2p);
