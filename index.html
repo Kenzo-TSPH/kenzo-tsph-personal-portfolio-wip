@@ -12,6 +12,7 @@
     <script src="script.js" defer></script>
     <script src="javascript/marquee-animation.js" defer></script>
     <script src="javascript/coin-toss-animation.js" defer></script>
+    <script src="javascript/featured-projects-animations.js" defer></script>
 </head>
 
 <body>
@@ -130,14 +131,14 @@
 
     <section class="featured-projects">
         <div class="featuredProjectsTitle">
-            <h1><span>Featured</span> <span id="projects">Projects</span></h1>
-            <a href="html/projects.html" id="viewAll">View all <img src="assets/svgs/arrow-right.svg" alt="Arrow right"
+            <h1><span id="featured-typed-part1"></span><span id="projects"></span><span class="featured-cursor">|</span></h1>
+            <a href="html/projects.html" id="viewAll" class="reveal-fade-right">View all <img src="assets/svgs/arrow-right.svg" alt="Arrow right"
                     class="arrow-icon"></a>
         </div>
 
         <div class="featured-projects-container">
 
-            <article class="project-card codeatlas-card" data-link="html/projectsDetails/codeAtlas.html" data-contributors-repo="TarekMoustafaElsayed/CodeAtlas">
+            <article class="project-card codeatlas-card card-fade-bottom" data-link="html/projectsDetails/codeAtlas.html" data-contributors-repo="TarekMoustafaElsayed/CodeAtlas">
                 <div class="project-preview">
                     <div class="project-header">
                         <div class="browser-buttons">
@@ -193,7 +194,7 @@
             </article>
 
 
-            <article class="project-card" data-link="html/projectsDetails/kazamasSushi.html">
+            <article class="project-card card-fade-top" data-link="html/projectsDetails/kazamasSushi.html">
 
                 <div class="project-preview">
 

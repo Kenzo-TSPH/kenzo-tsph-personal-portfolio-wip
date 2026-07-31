@@ -1,20 +1,6 @@
+@import url('featuredProjectsAnimation.css');
+
 /* FEATURED PROJECTS */
-
-@keyframes starGlow{
-
-    0%,100%{
-        filter:
-            brightness(1)
-            drop-shadow(0 0 0px rgba(255,220,70,0));
-    }
-
-    50%{
-        filter:
-            brightness(1.4)
-            drop-shadow(0 0 8px rgba(255,220,70,.8));
-    }
-
-}
 
 .featured-projects {
     padding: 0.5rem 7rem;
@@ -52,6 +38,7 @@
     text-decoration: none;
     font-family: var(--dm-sans);
     font-weight: 600;
+    padding-right: 0.5rem;
 }
 
 #viewAll img {
@@ -410,3 +397,36 @@
 .project-links a:hover svg { 
     stroke: #ffa019; 
 }*/
+
+/* SCROLL REVEAL ANIMATIONS */
+
+.reveal-fade-right {
+    opacity: 0;
+}
+
+.reveal-fade-right.visible {
+    animation: fadeInRight .8s ease forwards;
+}
+
+.card-fade-top {
+    opacity: 0;
+}
+
+.card-fade-top.visible {
+    animation: fadeFromTop 1s ease forwards;
+}
+
+.card-fade-bottom {
+    opacity: 0;
+}
+
+.card-fade-bottom.visible {
+    animation: fadeFromBottom 1s ease forwards;
+}
+
+.featured-cursor {
+    color: #e0e0e0;
+    font-weight: 400;
+    animation: cursorBlink .7s step-end infinite;
+    user-select: none;
+}

@@ -13,7 +13,7 @@
 @import url("css/header/header.css");
 @import url("css/aboutMe/aboutmeHome.css");
 @import url("css/marqueeAnimation/beginningAnimation.css");
-@import url("css/featuredProjects.css");
+@import url("css/featuredProjects/featuredProjects.css");
 
 @font-face {
     font-family: 'Poxast Regular';
