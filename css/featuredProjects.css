@@ -98,16 +98,25 @@
     cursor: pointer;
 }
 
-.project-card:hover {
-    border: 1px solid rgba(255, 145, 61, 0.8);
-}
 
 .project-card:hover .project-preview {
     transform: scale(1.04);
 }
 
+.project-card:hover {
+    border: 1px solid rgba(255, 176, 115, 0.8);
+}
+
 .project-card:hover .project-info h2 {
-    color: rgba(255, 145, 61, 0.8);
+    color: rgba(255, 176, 115, 0.8);
+}
+
+.codeatlas-card:hover {
+    border: 1px solid rgba(70, 130, 180, 0.8);
+}
+
+.codeatlas-card:hover .project-info h2 {
+    color: rgba(70, 130, 180, 0.8);
 }
 
 /* TOP PREVIEW */
@@ -237,6 +246,12 @@
     height: 36px;
 
     border-radius: 50%;
+
+    margin-left: -10px;
+}
+
+.avatars img:first-child {
+    margin-left: 0;
 }
 
 .contributors span {

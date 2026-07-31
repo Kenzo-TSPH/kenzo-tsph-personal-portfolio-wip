@@ -34,12 +34,70 @@ document.addEventListener('DOMContentLoaded', function () {
 
     typeWriter();
 
-    // My github username , star counts and collaborators if theres any showing up
+    // Star counts for every card (Shields.io - no GitHub rate limits)
+
+    document.querySelectorAll('.repo-stars').forEach(repoStars => {
+        const repo = repoStars.dataset.repo;
+        const countEl = repoStars.querySelector('.star-count');
+        if (!repo || !countEl) return;
+
+        fetch(`https://img.shields.io/github/stars/${repo}.json`)
+            .then(res => {
+                if (!res.ok) throw new Error('Shields error');
+                return res.json();
+            })
+            .then(data => {
+                countEl.textContent = data.value;
+            })
+            .catch(() => {
+                countEl.textContent = '0';
+            });
+    });
+
+    // Contributor avatars + count (cards with data-contributors-repo)
+
+    document.querySelectorAll('.project-card[data-contributors-repo]').forEach(card => {
+        const repo = card.dataset.contributorsRepo;
+        const avatarsContainer = card.querySelector('.avatars');
+        const countEl = card.querySelector('.contributors-count');
+
+        fetch(`https://img.shields.io/github/contributors/${repo}.json`)
+            .then(res => {
+                if (!res.ok) throw new Error('Shields error');
+                return res.json();
+            })
+            .then(data => {
+                countEl.textContent = `${data.value} contributors`;
+            })
+            .catch(() => {
+                countEl.textContent = '0 contributors';
+            });
+
+        if (avatarsContainer) {
+            fetch(`https://api.github.com/repos/${repo}/contributors?per_page=5`)
+                .then(res => {
+                    if (!res.ok) throw new Error('GitHub API error');
+                    return res.json();
+                })
+                .then(list => {
+                    list.forEach(contributor => {
+                        const img = document.createElement('img');
+                        img.src = contributor.avatar_url;
+                        img.alt = contributor.login;
+                        avatarsContainer.appendChild(img);
+                    });
+                })
+                .catch(() => {
+                    // Leave avatars empty if the API fails
+                });
+        }
+    });
+
+    // Owner avatar for cards without a contributors repo
 
     const GITHUB_USERNAME = 'TarekMoustafaElsayed';
-    const avatarContainer = document.querySelector('.featured-projects .avatars');
 
-    if (avatarContainer) {
+    document.querySelectorAll('.project-card:not([data-contributors-repo]) .avatars').forEach(avatarContainer => {
         const img = document.createElement('img');
         img.src = `https://github.com/${GITHUB_USERNAME}.png`;
         img.alt = GITHUB_USERNAME;
@@ -47,26 +105,17 @@ document.addEventListener('DOMContentLoaded', function () {
             avatarContainer.textContent = GITHUB_USERNAME.charAt(0).toUpperCase();
         };
         avatarContainer.appendChild(img);
-    }
+    });
 
-    const repoStars = document.querySelector('.repo-stars');
-    if (repoStars) {
-        const repo = repoStars.dataset.repo;
-        fetch(`https://api.github.com/repos/${repo}`)
-            .then(res => {
-                if (!res.ok) throw new Error('GitHub API error');
-                return res.json();
-            })
-            .then(data => {
-                repoStars.querySelector('.star-count').textContent = data.stargazers_count;
-            })
-            .catch(() => {
-                repoStars.querySelector('.star-count').textContent = '0';
-            });
-    }
-});
+    // Card navigation
 
-document.querySelector('.project-card').addEventListener('click', function (e) {
-    if (e.target.closest('a')) return;
-    window.location.href = 'html/projectsDetails/kazamasSushi.html';
+    document.querySelectorAll('.project-card').forEach(card => {
+        card.addEventListener('click', function (e) {
+            if (e.target.closest('a')) return;
+            const link = card.dataset.link;
+            if (link) {
+                window.location.href = link;
+            }
+        });
+    });
 });
