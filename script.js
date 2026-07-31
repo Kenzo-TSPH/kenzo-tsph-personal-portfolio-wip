@@ -1,3 +1,5 @@
+//Type writer Animation
+
 document.addEventListener('DOMContentLoaded', function () {
     const greetingPart = document.getElementById('greeting-part');
     const namePart = document.getElementById('myName');
@@ -32,6 +34,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
     typeWriter();
 
+    // My github username , star counts and collaborators if theres any showing up
+
     const GITHUB_USERNAME = 'TarekMoustafaElsayed';
     const avatarContainer = document.querySelector('.featured-projects .avatars');
 
@@ -60,4 +64,9 @@ document.addEventListener('DOMContentLoaded', function () {
                 repoStars.querySelector('.star-count').textContent = '0';
             });
     }
+});
+
+document.querySelector('.project-card').addEventListener('click', function (e) {
+    if (e.target.closest('a')) return;
+    window.location.href = 'html/projectsDetails/kazamasSushi.html';
 });
