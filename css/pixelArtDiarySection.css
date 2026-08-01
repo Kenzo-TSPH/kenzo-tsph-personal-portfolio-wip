@@ -39,14 +39,20 @@
 
     position:absolute;
 
-    top:25%;
-    bottom:8%;
-    left:12%;
-    right:4%;
+    /* cover the entire book */
+    inset:0;
 
     display:grid;
     grid-template-columns:1fr 1fr;
-    column-gap:4%;
+
+    /* these are the paper margins */
+    padding:
+        22%
+        0%
+        40%
+        14%;
+
+    column-gap:7%;
 }
 
 .book{
@@ -60,11 +66,18 @@
     flex-direction:column;
 
     padding:
-        2.4rem
+        3rem
         1.8rem
         0.2rem
         1.4rem;
 
+}
+
+.left-page span{
+    font-size:0.5rem;
+    white-space: nowrap;
+    font-family: var(--pixel-operator-mono8);
+    padding-left: 7rem;
 }
 
 .post-header{
@@ -72,32 +85,28 @@
     display:flex;
     justify-content:space-between;
     align-items:flex-start;
-    margin-bottom:1rem;
+    margin-bottom:0.2rem;
     font-family: var(--pixel-operator-mono8);
+    gap: 1rem;
+    flex-wrap: nowrap
 }
 
 .post-header h2{
 
-    font-size:0.8rem;
-
-}
-
-.post-header span{
-
     font-size:0.6rem;
+    white-space: nowrap
+
 }
 
 .post-body{
 
     flex:1;
 
-    overflow-y:auto;
-
     padding-right:.5rem;
 
     font-family: var(--pixel-operator-mono8);
 
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 
     line-height:1.8;
 }
@@ -120,7 +129,7 @@
     justify-content:center;
     align-items:center;
 
-    padding:2rem;
+    padding:0.8rem;
 }
 
 .right-page img{
