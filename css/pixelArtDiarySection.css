@@ -15,352 +15,116 @@
     height: 80%;
 }
 
-.sushi-1 {
+.food-pack {
     position: absolute;
 
-    top: 7%;
-    left: 16%;
+    top: -37%;
+    left: -3%;
 
-    width:4.2%;
+    width:100%;
     height: auto;
 }
 
-.sushi-2 {
-    position: absolute;
 
-    top: 7%;
-    left: 18%;
+.book-wrapper{
+    position:absolute;
 
-    width:4.2%;
-    height: auto;
+    top:-6%;
+    left:30%;
+
+    width:35%;
 }
 
-.sushi-3 {
-    position: absolute;
+.book-content{
 
-    top: 8.5%;
-    left: 20%;
+    position:absolute;
 
-    width:4.2%;
-    height: auto;
+    top:25%;
+    bottom:8%;
+    left:12%;
+    right:4%;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    column-gap:4%;
 }
 
-.sushi-4 {
-    position: absolute;
-
-    top: 7%;
-    left: 22%;
-
-    width:4.2%;
-    height: auto;
+.book{
+    display:block;
+    width:100%;
 }
 
-.sushi-5 {
-    position: absolute;
+.left-page{
 
-    top: 15%;
-    left: 16.1%;
+    display:flex;
+    flex-direction:column;
 
-    width:4.2%;
-    height: auto;
+    padding:
+        2.4rem
+        1.8rem
+        0.2rem
+        1.4rem;
+
 }
 
-.sushi-6 {
-    position: absolute;
+.post-header{
 
-    top: 17%;
-    left: 18.2%;
-
-    width:4.2%;
-    height: auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:flex-start;
+    margin-bottom:1rem;
+    font-family: var(--pixel-operator-mono8);
 }
 
-.sushi-7 {
-    position: absolute;
+.post-header h2{
 
-    top: 15%;
-    left: 20.2%;
+    font-size:0.8rem;
 
-    width:4.2%;
-    height: auto;
 }
 
-.sushi-8 {
-    position: absolute;
+.post-header span{
 
-    top: 15%;
-    left: 22%;
-
-    width:4.2%;
-    height: auto;
+    font-size:0.6rem;
 }
 
-.sushi-9 {
-    position: absolute;
+.post-body{
 
-    top: 27%;
-    left: 16.8%;
+    flex:1;
 
-    width:3%;
-    height: auto;
+    overflow-y:auto;
+
+    padding-right:.5rem;
+
+    font-family: var(--pixel-operator-mono8);
+
+    font-size: 0.8rem;
+
+    line-height:1.8;
 }
 
-.sushi-10 {
-    position: absolute;
+/* Chrome */
 
-    top: 27%;
-    left: 19.2%;
-
-    width:3%;
-    height: auto;
+.post-body::-webkit-scrollbar{
+    width:0;
 }
 
-.sushi-11 {
-    position: absolute;
+/* Firefox */
 
-    top: 27%;
-    left: 21.6%;
-
-    width:3%;
-    height: auto;
+.post-body{
+    scrollbar-width:none;
 }
 
-.sushi-12 {
-    position: absolute;
+.right-page{
 
-    top: 32%;
-    left: 21.6%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 
-    width:3%;
-    height: auto;
+    padding:2rem;
 }
 
-.sushi-13 {
-    position: absolute;
+.right-page img{
 
-    top: 31.7%;
-    left: 19.2%;
-
-    width:3.2%;
-    height: auto;
-}
-
-.sushi-14 {
-    position: absolute;
-
-    top: 32%;
-    left: 24.4%;
-
-    width:3%;
-    height: auto;
-}
-
-.sushi-15 {
-    position: absolute;
-
-    top: 32%;
-    left: 17%;
-
-    width:2.8%;
-    height: auto;
-}
-
-.sushi-16 {
-    position: absolute;
-
-    top: 27.6%;
-    left: 24.6%;
-
-    width:2.8%;
-    height: auto;
-}
-
-.sushi-17 {
-    position: absolute;
-
-    top: 36%;
-    left: 17%;
-
-    width:3%;
-    height: auto;
-}
-
-.sushi-18 {
-    position: absolute;
-
-    top: 37%;
-    left: 24.6%;
-
-    width:3%;
-    height: auto;
-}
-
-.sushi-19 {
-    position: absolute;
-
-    top: 36%;
-    left: 19.4%;
-
-    width:3%;
-    height: auto;
-}
-
-.sushi-20 {
-    position: absolute;
-
-    top: 42%;
-    left: 24.6%;
-
-    width:3%;
-    height: auto;
-}
-
-.sushi-21 {
-    position: absolute;
-
-    top: 36%;
-    left: 21.6%;
-
-    width:3%;
-    height: auto;
-}
-
-.sushi-22 {
-    position: absolute;
-
-    top: 23.5%;
-    left: 24.9%;
-
-    width:2.7%;
-    height: auto;
-}
-
-.sushi-23 {
-    position: absolute;
-
-    top: 19.5%;
-    left: 24.9%;
-
-    width:2.7%;
-    height: auto;
-}
-
-.sushi-24 {
-    position: absolute;
-
-    top: 40%;
-    left: 16.8%;
-
-    width:3.2%;
-    height: auto;
-}
-
-.sushi-25 {
-    position: absolute;
-
-    top: 40%;
-    left: 19.1%;
-
-    width:3.2%;
-    height: auto;
-}
-
-.sushi-26 {
-    position: absolute;
-
-    top: 15.3%;
-    left: 24.9%;
-
-    width:2.7%;
-    height: auto;
-}
-
-.sushi-27 {
-    position: absolute;
-
-    top: 11.1%;
-    left: 24.9%;
-
-    width:2.7%;
-    height: auto;
-}
-
-.sushi-28 {
-    position: absolute;
-
-    top: 41%;
-    left: 21.9%;
-
-    width:2.4%;
-    height: auto;
-}
-
-.sushi-29 {
-    position: absolute;
-
-    top: 8%;
-    left: 25.1%;
-
-    width:2.5%;
-    height: auto;
-}
-
-.onigiri-1 {
-    position: absolute;
-
-    top: 47%;
-    left: 17.2%;
-
-    width:2.5%;
-    height: auto;
-}
-
-.onigiri-2 {
-    position: absolute;
-
-    top: 47%;
-    left: 19.7%;
-
-    width:2.5%;
-    height: auto;
-}
-
-.onigiri-3 {
-    position: absolute;
-
-    top: 47%;
-    left: 22.2%;
-
-    width:2.5%;
-    height: auto;
-}
-
-.onigiri-4 {
-    position: absolute;
-
-    top: 47%;
-    left: 24.7%;
-
-    width:2.5%;
-    height: auto;
-}
-
-.dorayaki {
-    position: absolute;
-
-    top: 44%;
-    left: 15.5%;
-
-    width:10%;
-    height: auto;
-}
-
-.purin{
-    position: absolute;
-
-    top: 50%;
-    left: 23.2%;
-
-    width:5%;
-    height: auto;
+    width:100%;
+    object-fit:contain;
 }

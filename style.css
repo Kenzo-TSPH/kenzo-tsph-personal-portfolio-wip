@@ -30,6 +30,13 @@
          url('assets/typography/PressStart2P-vaV7.ttf') format('truetype');
 }
 
+@font-face {
+    font-family: 'Pixel Operator Mono 8';
+    src: url('assets/typography/PixelOperatorMono8.woff2') format('woff2'),
+         url('assets/typography/PixelOperatorMono8.woff') format('woff'),
+         url('assets/typography/PixelOperatorMono8.ttf') format('truetype');
+}
+
 /* reusable CSS variables across all files */
 
 :root {
@@ -45,6 +52,7 @@
     --dm-serif-display: "DM Serif Display", serif;
     --dm-sans: "DM Sans", sans-serif;
     --press-start-2p: "Press Start 2P VA V7", normal;
+    --pixel-operator-mono8: "Pixel Operator Mono 8", normal;
 
     --sad-color: #121212;
     --sad-colortwo: #1e1e2e;
