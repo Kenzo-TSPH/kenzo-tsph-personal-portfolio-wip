@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Icon: arrow-left
+  Set: Memory Icons
+  Author: Pictogrammers (https://github.com/Pictogrammers/Memory)
+  License: Apache 2.0 (https://github.com/Pictogrammers/Memory/blob/main/LICENSE)
+  Source: https://iconify.design
+-->
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     viewBox="0 0 22 22"
+     width="22"
+     height="22">
+  <title>Pixelated Left Arrow Icon</title>
+  <metadata>
+    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+             xmlns:dc="http://purl.org/dc/elements/1.1/"
+             xmlns:cc="http://creativecommons.org/ns#">
+      <cc:Work rdf:about="">
+        <dc:title>Pixelated Left Arrow Icon</dc:title>
+        <dc:description>A minimalist pixelated left arrow icon, ideal for retro-themed designs, navigation buttons, or video game interfaces. Perfect for digital and print projects.</dc:description>
+        <dc:creator>
+          <cc:Agent>
+            <dc:title>Pictogrammers</dc:title>
+          </cc:Agent>
+        </dc:creator>
+        <dc:source>https://github.com/Pictogrammers/Memory</dc:source>
+        <dc:rights>
+          <cc:Agent>
+            <dc:title>Pictogrammers</dc:title>
+          </cc:Agent>
+        </dc:rights>
+        <cc:license rdf:resource="https://github.com/Pictogrammers/Memory/blob/main/LICENSE"/>
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
+        <dc:subject>
+          <rdf:Bag>
+            <rdf:li>pixelated-arrow</rdf:li>
+            <rdf:li>left-arrow</rdf:li>
+            <rdf:li>retro-arrow</rdf:li>
+            <rdf:li>pixel-art-icon</rdf:li>
+            <rdf:li>navigation-arrow</rdf:li>
+            <rdf:li>back-arrow</rdf:li>
+            <rdf:li>pixel-design</rdf:li>
+            <rdf:li>retro-style</rdf:li>
+            <rdf:li>8-bit-arrow</rdf:li>
+            <rdf:li>video-game-icon</rdf:li>
+            <rdf:li>directional-arrow</rdf:li>
+            <rdf:li>pixel-graphic</rdf:li>
+            <rdf:li>left-direction</rdf:li>
+            <rdf:li>retro-navigation</rdf:li>
+            <rdf:li>pixelated-design</rdf:li>
+          </rdf:Bag>
+        </dc:subject>
+      </cc:Work>
+      <cc:License rdf:about="https://github.com/Pictogrammers/Memory/blob/main/LICENSE">
+        <dc:title>Apache 2.0 (Apache-2.0)</dc:title>
+      </cc:License>
+    </rdf:RDF>
+  </metadata>
+  <path fill="currentColor" d="M5 12v-2h1V9h1V8h1V7h1V6h2v2h-1v1H9v1h9v2H9v1h1v1h1v2H9v-1H8v-1H7v-1H6v-1"/>
+</svg>

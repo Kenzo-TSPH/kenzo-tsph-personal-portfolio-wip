@@ -13,6 +13,7 @@
     <script src="javascript/marquee-animation.js" defer></script>
     <script src="javascript/coin-toss-animation.js" defer></script>
     <script src="javascript/featured-projects-animations.js" defer></script>
+    <script src="javascript/diary-topic-switch.js" defer></script>
 </head>
 
 <body>
@@ -271,18 +272,18 @@
 
             <div class="book-wrapper">
 
-            <img src="assets/pixelArtToPutOnTheTable/book.png" class="book">
+            <img src="assets/pixelArtToPutOnTheTable/book.png" class="book" style="user-select: none;">
 
             <div class="book-content">
 
                 <div class="left-page">
-                    <span>Aug 1, 2026</span>
+                    <span id="diary-date" style="user-select: none;">Aug 1, 2026</span>
 
                     <div class="post-header">
-                        <h2>The Beginning</h2>
+                        <h2 id="diary-title" style="user-select: none;">The Beginning</h2>
                     </div>
 
-                    <div class="post-body">
+                    <div class="post-body" id="diary-body" style="user-select: none;">
 
                         <p>
                             Today I started building my portfolio diary and it's so exciting aaaah!!!
@@ -307,9 +308,16 @@
                             Wish me luck everyone and goodbye!
                         </p>
                     </div>
+
+                    <button class="diary-nav-btn diary-back-btn" aria-label="Previous post">
+                        <img src="assets/svgs/arrow-left.svg" alt="Back" style="user-select: none;">
+                    </button>
                 </div>
                 <div class="right-page">
-                    <!-- <img src="images/screenshot.png"> -->
+                    <img id="diary-image" class="right-page-img" src="" alt="" hidden>
+                    <button class="diary-nav-btn diary-next-btn" aria-label="Next post">
+                        <img src="assets/svgs/arrow-left.svg" alt="Next" class="next-arrow-flip" style="user-select: none;">
+                    </button>
                 </div>
             </div>
         </div>
