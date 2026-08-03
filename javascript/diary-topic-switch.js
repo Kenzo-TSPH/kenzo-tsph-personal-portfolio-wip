@@ -40,8 +40,36 @@ const diaryBody = document.getElementById("diary-body");
 const diaryImage = document.getElementById("diary-image");
 const backBtn = document.querySelector(".diary-back-btn");
 const nextBtn = document.querySelector(".diary-next-btn");
+const bookContent = document.querySelector(".book-content");
+const bookTurnFrame = document.querySelector(".book-turn-frame");
+
+const LEFT_TURN_FRAMES = [];
+const RIGHT_TURN_FRAMES = [];
+const TOTAL_FRAMES = 14;
+const FRAME_INTERVAL = 60;
+
+for (let i = 1; i <= TOTAL_FRAMES; i++) {
+    const frame = String(i).padStart(3, "0");
+    LEFT_TURN_FRAMES.push(
+        `assets/pixelArtToPutOnTheTable/Page Turning Left Animation/Turning_pages_left_${frame}.png`
+    );
+    RIGHT_TURN_FRAMES.push(
+        `assets/pixelArtToPutOnTheTable/Page Turning Right Animation/Turning_pages_right_${frame}.png`
+    );
+}
+
+function preloadFrames(frames) {
+    frames.forEach((src) => {
+        const img = new Image();
+        img.src = src;
+    });
+}
 
 let currentIndex = 0;
+let isTurning = false;
+
+preloadFrames(LEFT_TURN_FRAMES);
+preloadFrames(RIGHT_TURN_FRAMES);
 
 function renderDiary() {
     const post = diaryData[currentIndex];
@@ -74,17 +102,47 @@ function updateButtons() {
     nextBtn.hidden = currentIndex === diaryData.length - 1;
 }
 
+function playTurnAnimation(frames) {
+    if (isTurning) return;
+    isTurning = true;
+
+    bookContent.classList.add("is-turning");
+    bookTurnFrame.hidden = false;
+
+    let frameIndex = 0;
+
+    const stepFrame = () => {
+        bookTurnFrame.src = frames[frameIndex];
+        frameIndex++;
+
+        if (frameIndex < frames.length) {
+            setTimeout(stepFrame, FRAME_INTERVAL);
+        } else {
+            setTimeout(finishTurn, FRAME_INTERVAL);
+        }
+    };
+
+    const finishTurn = () => {
+        bookTurnFrame.hidden = true;
+        bookContent.classList.remove("is-turning");
+        isTurning = false;
+        renderDiary();
+    };
+
+    stepFrame();
+}
+
 backBtn.addEventListener("click", () => {
     if (currentIndex > 0) {
         currentIndex--;
-        renderDiary();
+        playTurnAnimation(RIGHT_TURN_FRAMES);
     }
 });
 
 nextBtn.addEventListener("click", () => {
     if (currentIndex < diaryData.length - 1) {
         currentIndex++;
-        renderDiary();
+        playTurnAnimation(LEFT_TURN_FRAMES);
     }
 });
 
