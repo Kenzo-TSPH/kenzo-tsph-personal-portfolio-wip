@@ -42,7 +42,7 @@
 
         typeFeaturedTitle();
 
-        document.querySelectorAll('.reveal-fade-right, .card-fade-top, .card-fade-bottom')
+        featuredSection.querySelectorAll('.reveal-fade-right, .card-fade-top, .card-fade-bottom')
             .forEach(el => el.classList.add('visible'));
     }
 

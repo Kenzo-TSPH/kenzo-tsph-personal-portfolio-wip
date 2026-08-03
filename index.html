@@ -13,7 +13,7 @@
     <script src="javascript/marquee-animation.js" defer></script>
     <script src="javascript/coin-toss-animation.js" defer></script>
     <script src="javascript/featured-projects-animations.js" defer></script>
-    <script src="javascript/diary-topic-switch.js" defer></script>
+    <script src="javascript/featured-diary-records-animations.js" defer></script>
 </head>
 
 <body>
@@ -133,8 +133,7 @@
     <section class="featured-projects">
         <div class="featuredProjectsTitle">
             <h1><span id="featured-typed-part1"></span><span id="projects"></span><span class="featured-cursor">|</span></h1>
-            <a href="html/projects.html" id="viewAll" class="reveal-fade-right">View all <img src="assets/svgs/arrow-right.svg" alt="Arrow right"
-                    class="arrow-icon"></a>
+            <a href="html/projects.html" id="viewAll" class="reveal-fade-right">View all <img src="assets/svgs/arrow-right.svg" alt="Arrow right" class="arrow-icon"></a>
         </div>
 
         <div class="featured-projects-container">
@@ -265,8 +264,19 @@
         </div>
     </section>
 
+    <!--
+    This div had to be removed and put above the diary-gamingCards section since this entire 
+    section is all images and positioning for each images can be messed up pretty badly !
+    -->
+
+    <div class="featuredDiaryRecords">
+        <h1><span id="featuredDiary-typed-part1"></span><span id="diaryRecords"></span><span class="featured-cursor">|</span></h1>
+        <a href="html/diaryRecords.html" id="viewRecords" class="reveal-fade-right">View records <img src="assets/svgs/arrow-right.svg" alt="Arrow right" class="arrow-icon"></a>
+    </div>
+
     <section class="diary-gamingCards">
         <div class="diary-table-container">
+            <img src="assets/pixelArtToPutOnTheTable/rugForTheTable.jpg" alt="Rug" class="rug-for-the-table"> 
             <img src="assets/pixelArtToPutOnTheTable/table.png" alt="Table" class="diary-table">
             <img src="assets/pixelArtToPutOnTheTable/fantastic4Mat.jpg" alt="Fantastic 4 Mat" class="fantastic4-mat">
             <img src="assets/pixelArtToPutOnTheTable/Japanese-Food-Pack.png" alt="Food" class="food-pack">

@@ -147,3 +147,67 @@ nextBtn.addEventListener("click", () => {
 });
 
 renderDiary();
+
+const diarySection = document.querySelector('.diary-gamingCards');
+const diaryTypedPart1 = document.getElementById('featuredDiary-typed-part1');
+const diaryTypedPart2 = document.getElementById('diaryRecords');
+const diaryCursor = document.querySelector('.featuredDiaryRecords .featured-cursor');
+
+let diaryRevealTriggered = false;
+
+function typeDiaryTitle() {
+    if (!diaryTypedPart1 || !diaryTypedPart2) return;
+
+    const parts = ['Featured', ' Diary Records'];
+    const targets = [diaryTypedPart1, diaryTypedPart2];
+    let partIndex = 0;
+    let charIndex = 0;
+
+    function step() {
+        if (partIndex >= parts.length) {
+            if (diaryCursor) diaryCursor.style.display = 'none';
+            return;
+        }
+
+        const part = parts[partIndex];
+        if (charIndex < part.length) {
+            targets[partIndex].textContent += part[charIndex];
+            charIndex++;
+            setTimeout(step, 35);
+        } else {
+            partIndex++;
+            charIndex = 0;
+            setTimeout(step, 70);
+        }
+    }
+
+    step();
+}
+
+function triggerDiaryAnimations() {
+    if (diaryRevealTriggered) return;
+    diaryRevealTriggered = true;
+
+    typeDiaryTitle();
+
+    const viewRecordsLink = document.getElementById('viewRecords');
+    if (viewRecordsLink) viewRecordsLink.classList.add('visible');
+}
+
+const diaryObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            triggerDiaryAnimations();
+            diaryObserver.disconnect();
+        }
+    });
+}, { threshold: 0.25 });
+
+if (diarySection) {
+    diaryObserver.observe(diarySection);
+}
+
+const diaryHeader = document.querySelector('.featuredDiaryRecords');
+if (diaryHeader) {
+    diaryObserver.observe(diaryHeader);
+}
