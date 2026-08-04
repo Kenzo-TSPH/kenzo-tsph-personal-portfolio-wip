@@ -1,0 +1,48 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.5rem 7rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer p {
+    font-family: var(--dm-sans);
+    font-size: 0.85rem;
+    color: rgba(224, 224, 224, 0.5);
+    margin: 0;
+    user-select: none;
+}
+
+.footer-socials {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.footer-socials a {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: #e0e0e0;
+    transition: color 0.3s ease;
+}
+
+.footer-socials a img {
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+    transition: filter 0.3s ease;
+}
+
+.footer-socials a img[alt="GitHub"] { width: 1.4rem; height: 1.4rem; }
+.footer-socials a img[alt="LinkedIn"] { width: 1.1rem; height: 1.1rem; }
+.footer-socials a img[alt="Email"] { width: 2.4rem; height: 2.4rem; padding-top: 0.5rem;}
+
+.footer-socials a:hover {
+    color: rgba(255, 145, 61, 0.8);
+}
+
+.footer-socials a:hover img {
+    filter: brightness(0) saturate(100%) invert(59%) sepia(67%) saturate(711%) hue-rotate(346deg) brightness(107%) contrast(102%);
+}

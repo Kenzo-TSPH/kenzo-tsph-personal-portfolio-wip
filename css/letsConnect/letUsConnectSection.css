@@ -1,6 +1,6 @@
 .letUsConnect {
     padding: 0.5rem 7rem;
-    padding-bottom: 12rem;
+    padding-bottom: 6rem;
     padding-top: 0rem;
 }
 
@@ -8,7 +8,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 4rem;
+    margin-bottom: 1.5rem;
 }
 
 .let-us-connect-title h1 {
@@ -61,7 +61,7 @@
 }
 
 .let-us-connect-paragraph h3{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-family: var(--dm-sans);
     font-weight: 400;
     color: #e0e0e0;
@@ -70,5 +70,5 @@
 }
 
 .let-us-connect-paragraph.visible {
-    animation: fadeFromTop 1s ease forwards;
+    animation: fadeFromTop 1.3s ease forwards;
 }

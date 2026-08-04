@@ -112,11 +112,11 @@
     image-rendering: pixelated;
 }
 
-.pixelated-icon.devicon-flutter-plain {
+.tech-stack-item .pixelated-icon.devicon-flutter-plain {
     transform: translateX(43%);
 }
 
-.pixelated-icon.devicon-sqldeveloper-plain {
+.tech-stack-item .pixelated-icon.devicon-sqldeveloper-plain {
     transform: translateX(5%);
 }
 
