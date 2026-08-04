@@ -1,0 +1,74 @@
+.letUsConnect {
+    padding: 0.5rem 7rem;
+    padding-bottom: 12rem;
+    padding-top: 0rem;
+}
+
+.let-us-connect-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.let-us-connect-title h1 {
+    font-size: 50px;
+    font-weight: 400;
+    color: #e0e0e0;
+    font-family: var(--bitcoin-prop-single);
+    user-select: none;
+}
+
+.let-us-connect-title h1 #letUsConnect {
+    color: rgba(255, 145, 61, 0.8);
+}
+
+#bookAChat {
+    display: flex;
+    align-items: center;
+    gap: 0.28rem;
+    color: #e0e0e0;
+    font-size: 1rem;
+    text-decoration: none;
+    font-family: var(--dm-sans);
+    font-weight: 600;
+    padding-right: 0.5rem;
+}
+
+#bookAChat img {
+    width: 18px;
+    transition: transform .35s ease;
+}
+
+#bookAChat:hover {
+    color: rgba(255, 145, 61, 0.8);
+}
+
+.let-us-connect-title #bookAChat .arrow-icon {
+    width: 1.8rem;
+    height: 1.8rem;
+    padding-top: 0.5px;
+    transition: transform 0.3s ease;
+}
+
+.let-us-connect-title #bookAChat:hover .arrow-icon {
+    transform: translateX(3px);
+    filter: brightness(0) saturate(100%) invert(59%) sepia(67%) saturate(711%) hue-rotate(346deg) brightness(107%) contrast(102%);
+}
+
+.let-us-connect-paragraph {
+    opacity: 0;
+}
+
+.let-us-connect-paragraph h3{
+    font-size: 1.2rem;
+    font-family: var(--dm-sans);
+    font-weight: 400;
+    color: #e0e0e0;
+    line-height: 1.8rem;
+    user-select: none;
+}
+
+.let-us-connect-paragraph.visible {
+    animation: fadeFromTop 1s ease forwards;
+}
