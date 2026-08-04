@@ -158,7 +158,7 @@ let diaryRevealTriggered = false;
 function typeDiaryTitle() {
     if (!diaryTypedPart1 || !diaryTypedPart2) return;
 
-    const parts = ['Featured', ' Diary Records'];
+    const parts = ['Recent', ' Diary Records'];
     const targets = [diaryTypedPart1, diaryTypedPart2];
     let partIndex = 0;
     let charIndex = 0;

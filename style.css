@@ -14,7 +14,8 @@
 @import url("css/aboutMe/aboutmeHome.css");
 @import url("css/marqueeAnimation/beginningAnimation.css");
 @import url("css/featuredProjects/featuredProjects.css");
-@import url("css/pixelArtDiarySection.css");
+@import url("css/myTechnologyStack/myTechnologyStackSection.css");
+@import url("css/recentDiaryRecords/pixelArtDiarySection.css");
 
 @font-face {
     font-family: 'Poxast Regular';

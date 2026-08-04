@@ -1,0 +1,150 @@
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-120px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(120px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* MY TECHNOLOGY STACK */
+
+.my-technology-stack {
+     padding:0.5rem 7rem 12rem;
+}
+
+/* SECTION TITLE */
+
+.my-technology-stack-title {
+    margin-bottom: 4rem;
+}
+
+.my-technology-stack-title h1 {
+    font-size: 50px;
+    font-weight: 400;
+    color: #e0e0e0;
+    font-family: var(--bitcoin-prop-single);
+    user-select: none;
+}
+
+.my-technology-stack-title h1 #myTechStack {
+    color: rgba(255, 145, 61, 0.8);
+}
+
+/* TECH STACK ROWS */
+
+.tech-stack-icons-row1,
+.tech-stack-icons-row2 {
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-start;
+    flex-wrap:wrap;
+    gap:2rem;
+}
+
+.tech-stack-icons-row1 {
+    margin-bottom: 2rem;
+}
+
+/* TECH STACK ITEM */
+
+.tech-stack-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    width:15rem;
+    min-height:10.5rem;
+
+    gap:1.35rem;
+
+    border-radius:24px;
+
+    min-width: 8.5rem;
+    padding:2.4rem 1.8rem;
+
+    border: 1px solid rgba(255, 255, 255, .2);
+
+    background: rgba(255, 255, 255, .03);
+
+    transition: border-color .6s ease, background .6s ease, transform .4s ease;
+
+    user-select: none;
+}
+
+.tech-stack-item i {
+    font-size:5.2rem;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-top:0.5rem;
+
+    width:72px;
+    height:72px;
+}
+
+.tech-stack-item i.devicon-github-original {
+    color: #fff;
+}
+
+.tech-stack-item i.devicon-flutter-plain {
+    transform: translateX(40%);
+}
+
+.tech-stack-item i.devicon-sqldeveloper-plain {
+    transform: translateX(5%);
+}
+
+.tech-stack-item i.fa-node-js {
+    color: #339933;
+}
+
+.tech-stack-item:hover {
+    border-color: rgb(146, 146, 146);
+    background: rgba(255, 255, 255, .08);
+    transform: translateY(-5px);
+}
+
+.tech-stack-name {
+    padding: .5rem 1rem;
+
+    color: #e0e0e0;
+
+    font-family: var(--dm-sans);
+    font-size:1.5rem;
+    font-weight:600;
+
+    text-align: center;
+}
+
+/* SCROLL REVEAL ANIMATIONS */
+
+.stack-fade-right {
+    opacity: 0;
+}
+
+.stack-fade-right.visible {
+    animation: fadeInRight .8s ease forwards;
+}
+
+.stack-fade-left {
+    opacity: 0;
+}
+
+.stack-fade-left.visible {
+    animation: fadeInLeft .8s ease forwards;
+}
