@@ -44,19 +44,12 @@
     color: rgba(255, 145, 61, 0.8);
 }
 
-/* TECH STACK ROWS */
+/* TECH STACK GRID */
 
-.tech-stack-icons-row1,
-.tech-stack-icons-row2 {
-    display:flex;
-    justify-content:flex-start;
-    align-items:flex-start;
-    flex-wrap:wrap;
+.tech-stack-grid {
+    display:grid;
+    grid-template-columns:repeat(6, 1fr);
     gap:2rem;
-}
-
-.tech-stack-icons-row1 {
-    margin-bottom: 2rem;
 }
 
 /* TECH STACK ITEM */
@@ -101,12 +94,17 @@
     color: #fff;
 }
 
+.tech-stack-item .tech-stack-icon-img {
+    width: 72px;
+    height: 72px;
+}
+
 .tech-stack-item i.devicon-flutter-plain {
     transform: translateX(40%);
 }
 
 .tech-stack-item i.devicon-sqldeveloper-plain {
-    transform: translateX(5%);
+    transform: translateX(8%);
 }
 
 .tech-stack-item i.fa-node-js {
@@ -138,7 +136,7 @@
 }
 
 .stack-fade-right.visible {
-    animation: fadeInRight .8s ease forwards;
+    animation: fadeInRight 1s ease forwards;
 }
 
 .stack-fade-left {
@@ -146,5 +144,5 @@
 }
 
 .stack-fade-left.visible {
-    animation: fadeInLeft .8s ease forwards;
+    animation: fadeInLeft 1s ease forwards;
 }
