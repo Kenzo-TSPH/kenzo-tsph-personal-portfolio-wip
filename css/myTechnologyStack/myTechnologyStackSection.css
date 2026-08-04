@@ -29,7 +29,7 @@
 /* SECTION TITLE */
 
 .my-technology-stack-title {
-    margin-bottom: 4rem;
+    margin-bottom: 2rem;
 }
 
 .my-technology-stack-title h1 {
@@ -67,7 +67,7 @@
     border-radius:24px;
 
     min-width: 8.5rem;
-    padding:2.4rem 1.8rem;
+    padding:1rem 1rem;
 
     border: 1px solid rgba(255, 255, 255, .2);
 
@@ -94,17 +94,30 @@
     color: #fff;
 }
 
+.tech-stack-item .pixelated-icon {
+    width:72px;
+    height:72px;
+    flex-shrink:0;
+    margin-top:0.5rem;
+    margin-bottom:-0.5rem;
+    image-rendering: pixelated;
+}
+
 .tech-stack-item .tech-stack-icon-img {
     width: 72px;
     height: 72px;
+    flex-shrink: 0;
+    margin-top: 0.5rem;
+    margin-bottom:-0.5rem;
+    image-rendering: pixelated;
 }
 
-.tech-stack-item i.devicon-flutter-plain {
-    transform: translateX(40%);
+.pixelated-icon.devicon-flutter-plain {
+    transform: translateX(43%);
 }
 
-.tech-stack-item i.devicon-sqldeveloper-plain {
-    transform: translateX(8%);
+.pixelated-icon.devicon-sqldeveloper-plain {
+    transform: translateX(5%);
 }
 
 .tech-stack-item i.fa-node-js {

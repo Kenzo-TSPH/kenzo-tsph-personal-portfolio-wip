@@ -141,7 +141,7 @@ document.addEventListener("DOMContentLoaded", () => {
         'devicon-flutter-plain': '#014B87',
         'fa-node-js': '#2B852B',
         'devicon-mongodb-plain': '#47A248',
-        'fa-figma': '#D6441B',
+        'fa-figma': '#a259ff',
         'devicon-react-original': '#61DAFB',
         'devicon-vscode-plain': '#007ACC',
     };
