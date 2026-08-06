@@ -52,10 +52,16 @@ document.addEventListener("DOMContentLoaded", () => {
         animationId = requestAnimationFrame(renderVideoInText);
     }
 
-    const rect = easterEggTitle.getBoundingClientRect();
+    function resizeCanvas() {
+        const rect = easterEggTitle.getBoundingClientRect();
 
-    canvas.width = rect.width;
-    canvas.height = rect.height;
+        canvas.width = rect.width;
+        canvas.height = rect.height;
+    }
+
+    document.fonts.ready.then(() => {
+        resizeCanvas();
+    });
 
     if (easterEggTitle && easterEggVideo) {
         easterEggTitle.addEventListener('click', () => {
