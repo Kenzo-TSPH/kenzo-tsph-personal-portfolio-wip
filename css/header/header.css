@@ -3,10 +3,24 @@
 }
 
 .header-container {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-top: 10px;
+    padding-bottom: 25px;
+}
+
+.header-backdrop {
+    position: absolute;
+    inset: 0;
+    z-index: -1;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    mask-image: linear-gradient(black 70%, transparent);
+    -webkit-mask-image: linear-gradient(black 70%, transparent);
 }
 
 .header-container .title-group {
@@ -16,12 +30,86 @@
 }
 
 .header-container h1 {
+    position: relative;
     font-family: var(--space-grotesk);
-    color: #ffffff;
-    opacity: 0.8;
+    font-weight: 800;
+    letter-spacing: 1px;
+
+    cursor: url('../../assets/cursors/unique2.png'), pointer;
+    background: linear-gradient(
+        to bottom,
+        #ffffff 0%,
+        #fdfdfd 18%,
+        #f4f4f4 42%,
+        #dedede 65%,
+        #b3b3b3 82%,
+        #7a7a7a 100%
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+
+    text-shadow:
+        0 1px 0 rgba(255,255,255,.25),
+        0 2px 2px rgba(0,0,0,.35);
+
+    filter: contrast(1);
+
+    opacity: .97;
     user-select: none;
     white-space: nowrap;
     word-spacing: 10px;
+    transition:opacity .6s ease;
+}
+
+.header-container h1:hover {
+    opacity: 0.75;
+}
+
+.title-text{
+    transition:opacity .6s ease;
+    position:relative;
+    z-index:2;
+}
+
+#videoTextCanvas{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    opacity:0;
+    pointer-events:none;
+    transition:opacity .6s ease;
+
+    z-index:1;
+}
+
+.video-playing #videoTextCanvas{
+    opacity:1;
+}
+
+.video-playing .title-text{
+    opacity:0;
+}
+
+#easterEggTitle{
+    position:relative;
+    display:inline-block;
+}
+
+#easterEggVideo{
+    position:absolute;
+    inset:0;
+    visibility:hidden;
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+    pointer-events:none;
 }
 
 .header-container h3 {
@@ -45,10 +133,31 @@
 }
 
 .nav-links a {
+    position: relative;
     font-family: var(--mozilla-text);
     color: #ffffff;
     text-decoration: none;
     opacity: 0.6;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.nav-links a:hover {
+    opacity: 1;
+}
+
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #ffffff;
+    transition: width 0.3s ease-in-out;
+}
+
+.nav-links a:hover::after {
+    width: 100%;
 }
 
 .green-bulb {

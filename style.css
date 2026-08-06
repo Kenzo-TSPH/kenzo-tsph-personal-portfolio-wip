@@ -80,5 +80,25 @@
 }
 
 body {
+    margin: 0;
     background-color: var(--sad-colortwo);
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(255, 145, 61, 0.8);
+    border-radius: 5px;
+}
+
+html {
+    overflow-x: hidden;
+    scrollbar-color: rgba(255, 145, 61, 0.8) transparent;
+    scrollbar-width: thin;
 }

@@ -1,15 +1,18 @@
+<!--kenzo-tsph.github.io-->
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Hero/Tarek</title>
+    <title>Kenzo-TSPH</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
     <link rel="icon" type="image/png" href="assets/favicon/eheroNeos.png">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="javascript/easter-egg-homeOnly.js" defer></script>
     <script src="javascript/marquee-animation.js" defer></script>
     <script src="javascript/coin-toss-animation.js" defer></script>
     <script src="javascript/featured-projects-animations.js" defer></script>
@@ -19,9 +22,17 @@
 </head>
 
 <body>
+
     <header class="header-container">
+        <div class="header-backdrop"></div>
         <div class="title-group">
-            <h1>E-Hero/Tarek</h1>
+            <h1 id="easterEggTitle">
+                <span class="title-text">Kenzo-TSPH</span>
+                <canvas id="videoTextCanvas"></canvas>
+        <video id="easterEggVideo" muted playsinline preload="auto">
+            <source src="assets/easteregg/VideoBehindTheText.mp4" type="video/mp4">
+        </video>
+            </h1>
             <span class="green-bulb"></span>
             <h3>Available for work</h3>
         </div>
@@ -29,6 +40,7 @@
             <a href="index.html">Home</a>
             <a href="html/about.html">About</a>
             <a href="html/projects.html">Projects</a>
+            <a href="html/diaryRecords.html">Diary</a>
             <a href="html/contact.html">Contact</a>
         </nav>
     </header>
@@ -73,7 +85,7 @@
                 <div class="mySocials-rightSide-Bottom">
                     <a href="assets/resume/Tarek Moustafa ElSayed.docx" download class="resume-btn">Resume <i
                             class="fas fa-file-download"></i></a>
-                    <a href="https://github.com/eheroTarek" target="_blank" rel="noopener noreferrer"
+                    <a href="https://github.com/Kenzo-TSPH" target="_blank" rel="noopener noreferrer"
                         aria-label="GitHub" class="github-link"><img src="assets/svgs/github.svg" alt="GitHub"></a>
                     <a href="https://www.linkedin.com/in/tarek-moustafa-a29522329/" target="_blank"
                         rel="noopener noreferrer" aria-label="LinkedIn" class="linkedin-link"><img
@@ -430,9 +442,9 @@
     </section>
 
     <footer class="footer">
-        <p>&copy; 2026 E-Hero/Tarek</p>
+        <p>&copy; 2026 Kenzo-TSPH</p>
         <div class="footer-socials">
-            <a href="https://github.com/eheroTarek" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="assets/svgs/github.svg" alt="GitHub"></a>
+            <a href="https://github.com/Kenzo-TSPH" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><img src="assets/svgs/github.svg" alt="GitHub"></a>
             <a href="https://www.linkedin.com/in/tarek-moustafa-a29522329/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/svgs/linkedin.svg" alt="LinkedIn"></a>
             <a href="mailto:tarek.mostafa.elsayed.2003@gmail.com" aria-label="Email"><img src="assets/svgs/email.svg" alt="Email"></a>
         </div>
