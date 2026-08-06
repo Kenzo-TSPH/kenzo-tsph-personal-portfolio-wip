@@ -80,7 +80,7 @@ document.addEventListener("DOMContentLoaded", () => {
             setTimeout(() => {
                 cancelAnimationFrame(animationId);
                 ctx.clearRect(0, 0, canvas.width, canvas.height);
-            }, 600);
+            }, 700);
         });
     }
 

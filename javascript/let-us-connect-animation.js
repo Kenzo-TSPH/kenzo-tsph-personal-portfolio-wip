@@ -61,3 +61,40 @@ const connectObserver = new IntersectionObserver(entries => {
 if (connectSection) {
     connectObserver.observe(connectSection);
 }
+
+//for contact me form
+
+const contactPart1 = document.getElementById('contact-me-part1');
+const contactPart2 = document.getElementById('contact-me');
+const contactCursor = document.querySelector('.contact-me-section .featured-cursor');
+
+function typeConnectTitle2() {
+    if (!contactPart1 || !contactPart2) return;
+
+    const parts = ["Contact ", 'Me!'];
+    const targets = [contactPart1, contactPart2];
+    let partIndex = 0;
+    let charIndex = 0;
+
+    function step() {
+        if (partIndex >= parts.length) {
+            if (contactCursor) contactCursor.style.display = 'none';
+            return;
+        }
+
+        const part = parts[partIndex];
+        if (charIndex < part.length) {
+            targets[partIndex].textContent += part[charIndex];
+            charIndex++;
+            setTimeout(step, 35);
+        } else {
+            partIndex++;
+            charIndex = 0;
+            setTimeout(step, 70);
+        }
+    }
+
+    step();
+}
+
+typeConnectTitle2();
